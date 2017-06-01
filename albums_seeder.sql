@@ -1,5 +1,7 @@
 USE codeup_test_db;
 
+-- TRUNCATE albums; <- Will reset the counter for the auto_increment column
+
 INSERT INTO albums
 (artist, name, release_date, genre, sales)
 VALUES
