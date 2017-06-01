@@ -1,13 +1,14 @@
 -- delete exercise
+-- write in select statement then replace select with delete.
 
 USE codeup_test_db;
 
 select 'Albums released after 1991' as '';
-DELETE name FROM albums WHERE release_date = 1991;
+DELETE FROM albums WHERE release_date > 1991;
 
 select 'Albums with the genre disco' as '';
-DELETE name FROM albums WHERE genre LIKE '%disco%';
+DELETE FROM albums WHERE genre = 'disco';
 
 select 'Albums by ''Whitney Houston'' (...or maybe an artist of your choice)' as '';
-DELETE name, artist FROM albums WHERE artist = 'Whitney Houston';
+DELETE FROM albums WHERE artist LIKE '%Whitney Houston%';
 
