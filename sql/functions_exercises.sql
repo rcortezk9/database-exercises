@@ -1,11 +1,13 @@
 USE employees;
 
-SELECT *
+SELECT count(*), gender
 FROM employees
-WHERE first_name ='Irena'
-      OR first_name = 'Maya'
-      OR first_name = 'Vidya'
-ORDER BY first_name;
+WHERE (
+  first_name = 'Irena'
+  OR first_name = 'Maya'
+  OR first_name = 'Vidya'
+)
+GROUP BY gender;
 
 SELECT *
 FROM employees
