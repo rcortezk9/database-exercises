@@ -9,14 +9,8 @@ WHERE (
 )
 GROUP BY gender;
 
-SELECT *
-FROM employees
-WHERE first_name ='Irena'
-      OR first_name = 'Maya'
-      OR first_name = 'Vidya'
-ORDER BY first_name, last_name;
 
-SELECT *
+SELECT concat(first_name, ' ', last_name)
 FROM employees
 WHERE last_name LIKE 'E%'
       OR last_name LIKE '%E'
