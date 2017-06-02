@@ -26,8 +26,13 @@ WHERE last_name LIKE '%q%'
 GROUP BY concat(first_name, ' ', last_name) DESC
 ORDER BY count(*) DESC;
 
-SELECT concat(last_name, ' ', first_name) AS full_name, birth_date
+SELECT
+  concat(emp_no, ' ', '-', ' ', last_name, ',', ' ', first_name) AS full_name,
+  concat(birth_date) AS 'D.O.B'
 FROM employees
 GROUP BY concat(last_name, ' ', first_name) ASC
+ORDER BY emp_no ASC
 LIMIT 10;
+
+
 
