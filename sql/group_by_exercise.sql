@@ -10,7 +10,8 @@ ORDER BY title ASC; # Update the previous query to sort the results alphabetical
 # Update the query find just the unique last names that start and end with 'E' using GROUP BY.
 # The results should be:
 
-SELECT first_name, last_name
+SELECT DISTINCT last_name
 FROM employees
 WHERE last_name LIKE 'E%'
-      AND last_name LIKE '%E';
+      AND last_name LIKE '%E'
+GROUP BY last_name ;
